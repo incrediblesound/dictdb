@@ -19,4 +19,4 @@ parse(dstream, istream).pipe(through.obj(function (row, enc, next) {
     next();
 }));
 
-function fix (w) { return w.replace(/^\w+\.\s+|;$/g,'') }
+function fix (w) { return w.replace(/^\w+\.\s*|;$/g,'') }
