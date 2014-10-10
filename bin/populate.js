@@ -1,6 +1,6 @@
 var sublevel = require('level-sublevel/bytewise');
 var bytewise = require('bytewise');
+var level = require('level');
 
-module.exports = function (db) {
-    
-};
+var db = level('/tmp/dict.db');
+
