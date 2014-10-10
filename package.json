@@ -1,0 +1,39 @@
+{
+  "name": "dictdb",
+  "version": "1.0.0",
+  "description": "dictionary database for language translations",
+  "main": "index.js",
+  "dependencies": {
+    "bytewise": "~0.7.1",
+    "isarray": "~0.0.1",
+    "level-sublevel": "~6.3.15",
+    "through2": "~1.1.1"
+  },
+  "devDependencies": {
+    "level": "~0.18.0",
+    "minimist": "~1.1.0",
+    "parse-dictd": "~1.0.1",
+    "tape": "^2.13.2"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substack/dictdb.git"
+  },
+  "homepage": "https://github.com/substack/dictdb",
+  "keywords": [
+    "dictionary",
+    "language",
+    "translation",
+    "offline",
+    "leveldb"
+  ],
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "license": "MIT"
+}
