@@ -13,8 +13,10 @@ var dstream = fs.createReadStream(argv._[0]).pipe(gunzip());
 var istream = fs.createReadStream(argv._[1]);
 
 parse(dstream, istream).pipe(through.obj(function (row, enc, next) {
-    var a = { word: row.from, lang: argv.from };
-    var b = { word: row.to, lang: argv.to };
+    var a = { word: fix(row.from), lang: argv.from };
+    var b = { word: row.to.map(fix), lang: argv.to };
     ddb.link(a, b);
     next();
 }));
+
+function fix (w) { return w.replace(/^\w\.\s+/,'') }
